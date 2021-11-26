@@ -3,13 +3,12 @@ Makes it easy to translate your resource fields.
 
 ### :warning: Unmaintained :warning:
 
-Sorry, but I no longer work on ActiveAdmin often enough to justify mantaining this gem. Take it as it is. If you are interested to update and maintain the gem, please let me know! :heart:
+This is still mostly unmaintained. I just removed specific version requirements for `activeadmin` and `globalize` – meaning this won't block you from updating but it doesn't guarantee it will still work. I've done some minor tweaks to make it run ok with activeadmin 2.9.0 which is enough for me now.
 
 ## Installation
 
 ```ruby
-gem "activeadmin-globalize", github: 'stefanoverna/activeadmin-globalize',
-branch: 'master'
+gem "activeadmin-globalize", git: 'https://github.com/YANOUSHek/activeadmin-globalize.git', branch: 'master'
 ```
 We still need to use GitHub because ActiveAdmin is still in active development
 and there's no released gem compatible with Rails 4.
