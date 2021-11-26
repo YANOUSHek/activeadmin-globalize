@@ -1,45 +1,59 @@
 @import "active_admin/mixins"
 
-.active_admin
-  .activeadmin-translations
-    margin-bottom: 20px
+@mixin border-top-radius($radii) {
+  border-top-left-radius: $radii;
+  border-top-right-radius: $radii;
+}
 
-    &> ul
-      position: relative
-      top: 4px
-      padding: 0 10px
+.active_admin {
+  .activeadmin-translations {
+    margin-bottom: 20px;
 
-      &> li
-        display: inline-block
+    &> ul {
+      position: relative;
+      top: 4px;
+      padding: 0 10px;
 
-        &> a
-          display: inline-block
-          color: #666
-          margin-right: 3px
-          text-decoration: none
-          font-size: 17px
-          padding: 8px 15px
-          padding-bottom: 8px + 4px
-          margin-bottom: 0
+      &> li {
+        display: inline-block;
 
-          &.error
-            color: #932419
+        &> a {
+          display: inline-block;
+          color: #666;
+          margin-right: 3px;
+          text-decoration: none;
+          font-size: 17px;
+          padding: 8px 15px;
+          padding-bottom: 12px;
+          margin-bottom: 0;
 
-          &.active
-            background: #f4f4f4
-            +inset-shadow(0, 4px, 4px, #ddd)
-            +border-top-radius(4px)
-            margin-bottom: 0
-            +gradient($secondary-gradient-stop, #f4f4f4)
-            text-shadow: 0 1px 0 white
-            color: #666 !important
+          &.error {
+            color: #932419;
+          }
 
-    &> fieldset.inputs
-      margin-bottom: 0
+          &.active {
+            background: #f4f4f4;
+            @include inset-shadow(0, 4px, 4px, #ddd);
+            @include border-top-radius(4px);
+            margin-bottom: 0;
+            @include gradient($secondary-gradient-stop, #f4f4f4);
+            text-shadow: 0 1px 0 white;
+            color: #666;
+          }
+        }
+      }
+    }
+    &> fieldset.inputs {
+      margin-bottom: 0;
 
-      ol
-        padding-left: 0
-        width: 100%
+      ol {
+        padding-left: 0;
+        width: 100%;
+      }
 
-      li.hidden
-        padding: 0 !important
+      li.hidden {
+        padding: 0;
+      }
+    }
+  }
+}
